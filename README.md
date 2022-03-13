@@ -1,6 +1,12 @@
 # Hashtag_Preferences_Replication
 This repository documents our attempt to replicate the results in the paper "[#HowYouTagTweets: Learning User Hashtagging Preferences via Personalized Topic Attention](https://aclanthology.org/2021.emnlp-main.616/)" paper published in EMNLP 2021. In this paper, the authors propose a model (PTA) that uses a novel Personalized Topic Attention mechanism to predict future user-hashtag engagement. This repository and set of directions is meant to supplement the author's repository. To follow along, you can navigate [here](https://github.com/polyusmart/Personalized-Hashtag-Preferences), download their source code, and copy our files into their main directory.
 
+## Model Architecture
+For referecne, here is a diagram of the PTA model that the authors propose
+<p align="center">
+'<img src="https://raw.githubusercontent.com/Yb-Z/images/main/20211017144829.png" width="380"/>'
+</p>
+
 
 ## Training the Model
 When we followed the instructions in the repository linked above, we were met with several missing files and dependencies. To train the model you will first need to set up a conda environemnt the using the `requirements.txt` file we provide. This contains more than the mere `python 3.8` and `pytorch 1.7.1` that the authors say you need. For our experiments, we skipped the data preprocess steps described in the author's repository and went straight to the **Training and Testing** section.
@@ -83,9 +89,14 @@ This uses the best model from training to predict on the train set. It outputs t
 ```bash
 python context_experiments.py
 ```
-This script uses the `model_outputs.txt` file, computes the P@5 for the various user and hashtag contexts, and creates two bar plots corresponding to those precision values.
+This script uses the `model_outputs.txt` file, computes the P@5 for the various user and hashtag contexts, and creates two bar plots corresponding to those precision values. Below are bar plots that we created when running this script.
 
-'<img src="https://raw.githubusercontent.com/Yb-Z/images/main/20211017144829.png" width="380"/>'
+<p align="center">
+'<img src="https://github.com/williamhowardsnyder/Hashtag_Preferences_Replication/blob/main/hashtag_bar_plot.png" width="380"/>'
+'<img src="https://github.com/williamhowardsnyder/Hashtag_Preferences_Replication/blob/main/user_bar_plot.png" width="380"/>'
+</p>
+
+As you can see from the bar plots above, we were unable to reproduce claims (i) and (ii) as the precision for PTA was significantly lower than LSTM-Att.
 
 ## Conclusion
 
