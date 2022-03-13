@@ -37,7 +37,7 @@ where `<metric>` is the metric used to evaluate on the test data (e.g., <mark>MA
 ## Accuracy Results
 
 When we train and predict using the author's model, we get an 0.2553 MAP, 0.0975 P@5, and 0.2644 nDCG@5. These results are significantly lower than those that the authors found and published in their paper. Below is a table summarizing the comparisons between the author's model, and ours.
-
+<center>
 <table class="tg">
 <tbody>
    <tr>
@@ -66,6 +66,8 @@ When we train and predict using the author's model, we get an 0.2553 MAP, 0.0975
   </tr>
 </tbody>
 </table>
+</center>
+As you can see, the results that we found were lower than the SOTA model LSTM-Att. So, we failed to replicate the main claim of the paper, which was that the Personalized Topic Attention model performs better than state of the art.
 
 ## Varying User and Hashtag Contexts
 We provides scripts to run some of the experiments from this paper. supplement the instructions.
