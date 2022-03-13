@@ -1,9 +1,9 @@
 # Hashtag_Preferences_Replication
-This repository documents our attempt to replicate the results in the paper "[#HowYouTagTweets: Learning User Hashtagging Preferences via Personalized Topic Attention](https://aclanthology.org/2021.emnlp-main.616/)" paper published in EMNLP 2021. This repository and set of directions is meant to supplement the author's repository. To follow along, you can navigate [here](https://github.com/polyusmart/Personalized-Hashtag-Preferences), download their source code, and copy our files into their main directory.
+This repository documents our attempt to replicate the results in the paper "[#HowYouTagTweets: Learning User Hashtagging Preferences via Personalized Topic Attention](https://aclanthology.org/2021.emnlp-main.616/)" paper published in EMNLP 2021. In this paper, the authors propose a model (PTA) that uses a novel Personalized Topic Attention mechanism to predict future user-hashtag engagement. This repository and set of directions is meant to supplement the author's repository. To follow along, you can navigate [here](https://github.com/polyusmart/Personalized-Hashtag-Preferences), download their source code, and copy our files into their main directory.
 
 
 ## Training the Model
-When we followed the instructions in the repository linked above, we were met with several missing files and dependencies. To train the model you will first need to set up a conda environemnt the using the `requirements.txt` file we provide. For our experiments, we skipped the data preprocess steps described in the author's repository and went straight to the **Training and Testing** section.
+When we followed the instructions in the repository linked above, we were met with several missing files and dependencies. To train the model you will first need to set up a conda environemnt the using the `requirements.txt` file we provide. This contains more than the mere `python 3.8` and `pytorch 1.7.1` that the authors say you need. For our experiments, we skipped the data preprocess steps described in the author's repository and went straight to the **Training and Testing** section.
 
 The authors list the following command for this section
 > For training and testing, turn to the main directory, run:
@@ -70,13 +70,19 @@ When we train and predict using the author's model, we get an 0.2553 MAP, 0.0975
 As you can see, the results that we found were lower than the SOTA model LSTM-Att. So, we failed to replicate the main claim of the paper, which was that the Personalized Topic Attention model performs better than state of the art.
 
 ## Varying User and Hashtag Contexts
-We provides scripts to run some of the experiments from this paper. supplement the instructions.
+In the paper, the authors also claim that (i) PTA outperforms LSTM-Att when user history is sparse, and (ii) PTA significantly outperforms LSTM-Att when hashtag context is large. The authors did not provide code for these experiments so we provide our own scripts to test these claims.
+
+### Claim (i)
+
+SOmething something
+
+### Claim (ii)
+
+something...
 
 ## Conclusion
 
-```bash
-python preprocess.py -data_dir data/StackExchange
-```
+Overall, we failed to reproduce the main claims of this paper. We would recommend that the authors update their published results, or provide more precise instructions on how to replicate the results that they achieved.
 
 
 ## Citation
