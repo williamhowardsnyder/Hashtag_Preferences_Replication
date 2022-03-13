@@ -78,7 +78,7 @@ As you can see, the results that we found were lower than the SOTA model LSTM-At
 ## Varying User and Hashtag Contexts
 In the paper, the authors also claim that (i) PTA outperforms LSTM-Att when user history is sparse, and (ii) PTA significantly outperforms LSTM-Att when hashtag context is large. The authors did not provide code for these experiments so we provide our own scripts, `pred_rich_info.py` and `context_experiments.py`, to test these claims.
 
-To run these scripts, follow the **Traing and Testing Section** above to get the best model. Then, run
+To run these scripts, follow the **Traing and Testing** section above to get the best model. Then, run
 
 ```bash
 python pred_rich_info.py
@@ -100,7 +100,7 @@ As you can see from the bar plots above, we were unable to reproduce claims (i) 
 
 ## Conclusion
 
-Overall, we failed to reproduce the main claims of this paper. We would recommend that the authors update their published results, or provide more precise instructions on how to replicate the results that they achieved.
+Overall, we failed to reproduce the main claims of this paper. We would recommend that the authors update their published results, or provide more precise instructions on how to replicate the results that they achieved. For more details about our procedure and the model itself, we refer you to the orginal paper, or our replication write-up.
 
 
 ## Citation
