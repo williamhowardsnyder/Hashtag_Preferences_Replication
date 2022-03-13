@@ -31,25 +31,27 @@ Again this is different from the command that the authors provide in their repos
 java -jar RankLib.jar -test sortTest.dat -metric2T <metric> -idv <file>
 ```
 
-\<metric>: Metric to evaluate on the test data. The authors used <mark>MAP</mark>, <mark>P@5</mark>, <mark>nDCG@5</mark> in the paper.
+where `<metric>` is the metric used to evaluate on the test data (e.g., <mark>MAP</mark>, <mark>P@5</mark>, <mark>nDCG@5</mark>) and `<file>` is the output file to print model performance on individual ranked lists to.
 
-\<file>: The output file to print model performance (in test metric) on individual ranked lists.
-
-The output example is the following:
-
-```
-Discard orig. features
-Model file:
-Feature normalization: No
-Test metric: <metric>
-Reading feature file [sortTest.dat]... [Done.]
-( ranked lists,  entries read)
-<metric> on test data: <result>
-Per-ranked list performance saved to: <file>
-```
 
 ## Accuracy Results
 
+When we train and predict using the author's model, we get an 0.2553 MAP, 0.0975 P@5, and 0.2644 nDCG@5. These results are significantly lower than those that the authors found and published in their paper. Below is a table summarizing the comparisons between the author's model, and various baselines.
+$$
+\begin{center}
+\begin{tabular}{|c|c c c|}
+\hline
+    Models & MAP & P@5 & nDCG@5 \\\hline\hline
+    MLP & 0.2624 & 0.0994 & 0.2677 \\
+    LSTM & 0.2659 & 0.1004 & 0.2763 \\
+    LSTM-Att (SOTA) & \textbf{0.2765} & \textbf{0.1043} & \textbf{0.2873} \\
+    \hline\hline
+    Author's Model & 0.3114 & 0.1148 & 0.3257\\
+    Our Model & 0.2553 & 0.0975 & 0.2644\\
+    \hline
+\end{tabular}
+\end{center}
+$$
 
 ## Varying User and Hashtag Contexts
 We provides scripts to run some of the experiments from this paper. supplement the instructions.
