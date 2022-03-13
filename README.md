@@ -37,7 +37,7 @@ where `<metric>` is the metric used to evaluate on the test data (e.g., <mark>MA
 ## Accuracy Results
 
 When we train and predict using the author's model, we get an 0.2553 MAP, 0.0975 P@5, and 0.2644 nDCG@5. These results are significantly lower than those that the authors found and published in their paper. Below is a table summarizing the comparisons between the author's model, and various baselines.
-$$
+```{=latex}
 \begin{center}
 \begin{tabular}{|c|c c c|}
 \hline
@@ -51,7 +51,7 @@ $$
     \hline
 \end{tabular}
 \end{center}
-$$
+```
 
 ## Varying User and Hashtag Contexts
 We provides scripts to run some of the experiments from this paper. supplement the instructions.
