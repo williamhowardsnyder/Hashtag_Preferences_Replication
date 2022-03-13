@@ -70,15 +70,22 @@ When we train and predict using the author's model, we get an 0.2553 MAP, 0.0975
 As you can see, the results that we found were lower than the SOTA model LSTM-Att. So, we failed to replicate the main claim of the paper, which was that the Personalized Topic Attention model performs better than state of the art.
 
 ## Varying User and Hashtag Contexts
-In the paper, the authors also claim that (i) PTA outperforms LSTM-Att when user history is sparse, and (ii) PTA significantly outperforms LSTM-Att when hashtag context is large. The authors did not provide code for these experiments so we provide our own scripts to test these claims.
+In the paper, the authors also claim that (i) PTA outperforms LSTM-Att when user history is sparse, and (ii) PTA significantly outperforms LSTM-Att when hashtag context is large. The authors did not provide code for these experiments so we provide our own scripts, `pred_rich_info.py` and `context_experiments.py`, to test these claims.
 
-### Claim (i)
+To run these scripts, follow the **Traing and Testing Section** above to get the best model. Then, run
 
-SOmething something
+```bash
+python pred_rich_info.py
+```
 
-### Claim (ii)
+This uses the best model from training to predict on the train set. It outputs the predictions to `model_outputs.txt` in the `Records` directory. Where this script differs from `prediction.py` is that it outputs the user, hashtag and ground truth label (i.e., 0/1) in a tab separated line with each prediction. After generating the augmented precition file run
 
-something...
+```bash
+python context_experiments.py
+```
+This script uses the `model_outputs.txt` file, computes the P@5 for the various user and hashtag contexts, and creates two bar plots corresponding to those precision values.
+
+'<img src="https://raw.githubusercontent.com/Yb-Z/images/main/20211017144829.png" width="380"/>'
 
 ## Conclusion
 
