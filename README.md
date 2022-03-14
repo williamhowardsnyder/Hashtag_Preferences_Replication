@@ -98,6 +98,23 @@ This script uses the `model_outputs.txt` file, computes the P@5 for the various 
 
 As you can see from the bar plots above, we were unable to reproduce claims (i) and (ii) as the precision for PTA was significantly lower than LSTM-Att.
 
+## Hyperparameter Tuning
+We conducted hyperparameter tuning by varying the batch sizes and learning rate in order over 20 epoch to determine the effect of the training accuracy and validation losses on the Multi Layer Perceptron(MLP)-Variational Autoencoders(VAE) model trained on the joint loss function
+
+<p align="center">
+'<img src="https://github.com/williamhowardsnyder/Hashtag_Preferences_Replication/blob/6941d8c58fc76689492b76b200e94721c6a76721/acc.png" width="380"/>'
+'<img src="https://github.com/williamhowardsnyder/Hashtag_Preferences_Replication/blob/6941d8c58fc76689492b76b200e94721c6a76721/loss.png" width="380"/>'
+</p>
+
+The following batch sizes and learning were used for hyperparamter tuning:
+- Batch Size = 256, Learning Rate = 1e-06  
+- Batch Size = 128, Learning Rate = 1e-06 (default)
+- Batch Size = 128, Learning Rate = 1e-05
+- Batch Size = 64, Learning Rate = 1e-05
+
+
+From the above two graph, the best model obtained is the one with batch size of 256 and a learning rate of 1e-06 which achieved a training accuracy of $95.67\%$ and a validation accuracy of $87.84\%$ over 20 epoch which is better than the default model used in the original paper of batch size of 128 and learning rate of 1e-06 which is better than the default model used in the original paper of batch size of 128 and learning rate of 1e-06
+
 ## Conclusion
 
 Overall, we failed to reproduce the main claims of this paper. We would recommend that the authors update their published results, or provide more precise instructions on how to replicate the results that they achieved. For more details about our procedure and the model itself, we refer you to the orginal paper, or our replication write-up.
