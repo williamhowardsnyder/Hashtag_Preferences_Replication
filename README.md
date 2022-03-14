@@ -2,7 +2,7 @@
 This repository documents our attempt to replicate the results in the paper "[#HowYouTagTweets: Learning User Hashtagging Preferences via Personalized Topic Attention](https://aclanthology.org/2021.emnlp-main.616/)" paper published in EMNLP 2021. In this paper, the authors propose a model (PTA) that uses a novel Personalized Topic Attention mechanism to predict future user-hashtag engagement. This repository and set of directions is meant to supplement the author's repository. To follow along, you can navigate [here](https://github.com/polyusmart/Personalized-Hashtag-Preferences), download their source code, and copy our files into their main directory.
 
 ## Model Architecture
-For referecne, here is a diagram of the PTA model that the authors propose
+For reference, here is a diagram of the PTA model that the authors propose
 <p align="center">
 '<img src="https://raw.githubusercontent.com/Yb-Z/images/main/20211017144829.png" width="380"/>'
 </p>
