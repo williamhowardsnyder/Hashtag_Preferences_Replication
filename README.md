@@ -106,7 +106,7 @@ We conducted hyperparameter tuning by varying the batch sizes and learning rate 
 '<img src="https://github.com/williamhowardsnyder/Hashtag_Preferences_Replication/blob/6941d8c58fc76689492b76b200e94721c6a76721/loss.png" width="600"/>'
 </p>
 
-The following batch sizes and learning were used for hyperparamter tuning:
+The following batch sizes and learning rate were used for hyperparamter tuning:
 - Batch Size = 256, Learning Rate = 1e-06  
 - Batch Size = 128, Learning Rate = 1e-06 (default)
 - Batch Size = 128, Learning Rate = 1e-05
